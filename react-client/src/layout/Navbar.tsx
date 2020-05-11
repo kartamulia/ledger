@@ -19,6 +19,7 @@ import Dashboard from '../features/dashboard/Dashboard';
 import Accounts from '../features/account/Accounts';
 import Journals from '../features/journal/Journals';
 import Ledgers from '../features/ledger/Ledgers';
+import FormLayout from '../features/account/form-layput/FormLayout';
 
 const drawerWidth = 240;
 
@@ -74,6 +75,8 @@ const Navbar = () => {
 				<ListItemLink to='/journals' primary='Journals' icon={<DashboardIcon />} />
 				<Divider />
 				<ListItemLink to='/ledgers' primary='Ledgers' icon={<DashboardIcon />} />
+				<Divider />
+				<ListItemLink to='/form-layout' primary='Ledgers' icon={<DashboardIcon />} />
 			</List>
 		</div>
 	)
@@ -141,6 +144,9 @@ const Navbar = () => {
 					</Route>
 					<Route path='/ledgers'>
 						<Ledgers />
+					</Route>
+					<Route path='/form-layout'>
+						<FormLayout />
 					</Route>
 				</Switch>
 			</main>
