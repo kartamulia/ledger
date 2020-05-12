@@ -28,6 +28,8 @@ const AddAccountDialog: React.FC<{
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if (!account.number) return;
+    if (!account.name) return;
     accountCreated(account);
     setAccount(emptyAccount);
     close();

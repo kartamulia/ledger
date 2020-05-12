@@ -71,6 +71,10 @@ const Accounts = () => {
   // add account
   const [addAccountDialogOpen, setAddAccountDialogOpen] = useState(false);
 
+  const addAccount = () => {
+    setAddAccountDialogOpen(true);
+  }
+
   const onAddAccountDialogClosed = () => {
     setAddAccountDialogOpen(false);
   }
@@ -119,7 +123,7 @@ const Accounts = () => {
           Accounts
         </Typography>
         <IconButton aria-label='add account' color='primary'
-          onClick={() => setAddAccountDialogOpen(true)}>
+          onClick={addAccount}>
           <AddIcon />
         </IconButton>
       </Grid>

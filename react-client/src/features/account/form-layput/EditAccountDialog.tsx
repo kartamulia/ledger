@@ -37,6 +37,8 @@ const EditAccountDialog: React.FC<{
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
+      if (!account.number) return;
+      if (!account.name) return;
       accountUpdated(editingAccount.number, editingAccount);
       setEditingAccount(emptyAccount);
       close();
@@ -66,7 +68,7 @@ const EditAccountDialog: React.FC<{
         aria-labelledby='edit-account-dialog-title'>
         <DialogTitle id='edit-account-dialog-title'>Edit Account</DialogTitle>
         <DialogContent>
-          <form method='pust'
+          <form method='put'
             onSubmit={handleSubmit}
           >
             <Grid container spacing={2}>
